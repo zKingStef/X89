@@ -1,0 +1,25 @@
+﻿{
+  "Name": "DarkBot",
+  "Prefix": "!",
+  "ShardCount": 1,
+  "Lavalink": {
+    "Enabled": false,
+    "Address": "127.0.0.1",
+    "Port": 2333,
+    "Password": "youshallnotpass"
+  },
+  "Tokens": {
+    "Discord": null,
+    "Steam": null,
+    "Imgur": null,
+    "Pokemon": null,
+    "OMDB": null,
+    "Twitch": null,
+    "TwitchAccess": null,
+    "NASA": null,
+    "TeamworkTF": null,
+    "News": null,
+    "Weather": null,
+    "YouTube": null
+  }
+}

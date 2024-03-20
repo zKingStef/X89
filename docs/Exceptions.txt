@@ -1,0 +1,2 @@
+﻿
+Error lavalink05 = "Keine Verbindung zum Lavalink möglich. Überprüfe die Verbindungen"
