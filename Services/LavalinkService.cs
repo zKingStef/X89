@@ -49,7 +49,7 @@ namespace X89Bot.Services
                     }
                     catch (Exception ex)
                     {
-                        Discord.Logger.LogError(LogEvent, ex, DarkBot.Properties.Resources.ERR_LAVALINK_CONNECTION);
+                        Discord.Logger.LogError(LogEvent, ex, X89.Properties.Resources.ERR_LAVALINK_CONNECTION);
                         throw;
                     }
                 });
@@ -76,7 +76,7 @@ namespace X89Bot.Services
             LavalinkGuildConnection sender,
             TrackExceptionEventArgs eventArgs)
         {
-            Discord.Logger.LogError(LogEvent, exception, DarkBot.Properties.Resources.ERR_LAVALINK_PLAYBACK);
+            Discord.Logger.LogError(LogEvent, exception, X89.Properties.Resources.ERR_LAVALINK_PLAYBACK);
         }
     }
 }

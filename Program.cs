@@ -50,13 +50,13 @@ namespace X89Bot
             }
             catch (Exception ex)
             {
-                Console.WriteLine(DarkBot.Properties.Resources.ERR_EXCEPTION, ex.Message);
+                Console.WriteLine(X89.Properties.Resources.ERR_EXCEPTION, ex.Message);
                 if (ex.InnerException != null)
-                    Console.WriteLine(DarkBot.Properties.Resources.ERR_EXCEPTION_INNER, ex.InnerException.Message);
+                    Console.WriteLine(X89.Properties.Resources.ERR_EXCEPTION_INNER, ex.InnerException.Message);
                 Console.ReadKey();
             }
 
-            Console.WriteLine(DarkBot.Properties.Resources.INFO_SHUTDOWN);
+            Console.WriteLine(X89.Properties.Resources.INFO_SHUTDOWN);
         }
 
         private static void ConsoleOnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
