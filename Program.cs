@@ -1,4 +1,4 @@
-﻿using DarkBot.Common;
+﻿using X89Bot.Common;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,11 +7,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DarkBot
+namespace X89Bot
 {
 	internal sealed class Program
     {
-        private static List<DarkBot> Shards { get; } = new List<DarkBot>();
+        private static List<X89Bot> Shards { get; } = new List<X89Bot>();
         public static BotSettings Settings { get; set; }
         private static CancellationTokenSource CancelTokenSource { get; } = new CancellationTokenSource();
 
@@ -38,7 +38,7 @@ namespace DarkBot
                 var botList = new List<Task>();
                 for (var i = 0; i < Settings?.ShardCount; i++)
                 {
-                    var client = new DarkBot(i);
+                    var client = new X89Bot(i);
                     Shards.Add(client);
                     botList.Add(client.RunAsync());
                     await Task.Delay(7500).ConfigureAwait(false);

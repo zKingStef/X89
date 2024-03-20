@@ -8,7 +8,7 @@ using System.Net.Http;
 using System;
 using System.Threading.Tasks;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
     public class ImageSL : ApplicationCommandModule
     {

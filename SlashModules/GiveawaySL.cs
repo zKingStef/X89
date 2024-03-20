@@ -6,7 +6,7 @@ using DSharpPlus.Entities;
 using DSharpPlus;
 using System.Runtime.Remoting.Messaging;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
     public class GiveawaySL : ApplicationCommandModule
     {

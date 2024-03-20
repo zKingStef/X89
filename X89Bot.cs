@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Threading.Tasks;
 using DSharpPlus;
-using DarkBot.Commands;
-using DarkBot.SlashModules;
+using X89Bot.Commands;
+using X89Bot.SlashModules;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.SlashCommands;
 using DSharpPlus.EventArgs;
-using DarkBot.EventHandlers;
+using X89Bot.EventHandlers;
 using System.Linq;
 using DSharpPlus.VoiceNext;
 using DSharpPlus.Lavalink;
@@ -17,13 +17,13 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using DSharpPlus.Interactivity.Enums;
 using System.IO;
-using DarkBot.Services;
-using DarkBot.Common;
+using X89Bot.Services;
+using X89Bot.Common;
 using DSharpPlus.SlashCommands.EventArgs;
 
-namespace DarkBot
+namespace X89Bot
 {
-	internal sealed class DarkBot
+	internal sealed class X89Bot
 	{
         private static DiscordClient Client { get; set; } 
         private IServiceProvider Services { get; }
@@ -34,7 +34,7 @@ namespace DarkBot
         private LavalinkExtension Lavalink { get; }
         private SlashCommandsExtension Slash { get; }
 
-        public DarkBot(int shardId = 0)
+        public X89Bot(int shardId = 0)
          {
             // Get Settings
             var settings = Program.Settings;
@@ -174,7 +174,7 @@ namespace DarkBot
         private static async Task InviteDeletedHandler(DiscordClient sender, InviteDeleteEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                            1143517864859549776,
+                                            1185697809874288671,
                                             AuditLogActionType.InviteDelete,
                                             "Einladung gelöscht!",
                                             $"**User:** {e.Invite.Inviter.Mention} \n" +
@@ -187,7 +187,7 @@ namespace DarkBot
         private static async Task InviteCreatedHandler(DiscordClient sender, InviteCreateEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                            1143517864859549776,
+                                            1185697809874288671,
                                             "Neue Einladung erstellt!",
                                             $"**User:** {e.Invite.Inviter.Mention} \n" +
                                             $"**Einladung:** {e.Invite.Code}, **läuft ab am** {e.Invite.ExpiresAt} \n" +
@@ -198,7 +198,7 @@ namespace DarkBot
         private static async Task ClientErrorHandler(DiscordClient sender, ClientErrorEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                           978346565582327858,
+                                           1185697808485978163,
                                            "Ein Fehler ist aufgetreten!",
                                            $"**Falls dieses Problem weiterhin bestehen bleibt, kontaktiere einen Administrator.**\n\n" +
                                            $"**{e.EventName}**\n{e.Exception}\n{e.Exception.Message}\n\n{e.Exception.InnerException}",
@@ -219,7 +219,7 @@ namespace DarkBot
             if (e.Before == null && e.After != null && e.After.Channel != null)
             {
                 await DiscordHelper.SendLogMessage(Client,
-                                                   1143519998669758584,
+                                                   1187080025737003059,
                                                    "Voicechat",
                                                    $"**{e.User.Mention} hat den Sprachkanal {e.After.Channel.Mention} betreten.**\n",
                                                    DiscordColor.SpringGreen);
@@ -227,7 +227,7 @@ namespace DarkBot
             else if (e.After == null)
             {
                 await DiscordHelper.SendLogMessage(Client,
-                                                   1143519998669758584,
+                                                   1187080025737003059,
                                                    "Voicechat",
                                                    $"**{e.User.Mention} hat den Sprachkanal {e.Before.Channel.Mention} verlassen.**\n",
                                                    DiscordColor.IndianRed);
@@ -239,7 +239,7 @@ namespace DarkBot
         private static async Task UserUpdatedHandler(DiscordClient sender, UserUpdateEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                           1143519230378119258,
+                                           1185697809874288671,
                                            AuditLogActionType.MemberUpdate,
                                            "Nickname geändert!",
                                            $"**User:** {e.UserAfter.Mention}" +
@@ -254,7 +254,7 @@ namespace DarkBot
             if (e.ChannelAfter.Name != e.ChannelBefore.Name)
             {
                 await DiscordHelper.SendLogMessage(Client,
-                                               1143519230378119258,
+                                               1185697811543633980,
                                                AuditLogActionType.ChannelUpdate,
                                                "Kanalname geändert!",
                                                $"**Channel:** {e.ChannelAfter.Mention}\n" +
@@ -268,7 +268,7 @@ namespace DarkBot
         private static async Task ChannelDeletedHandler(DiscordClient sender, ChannelDeleteEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                               1143512536885510174,
+                                               1185697811543633980,
                                                AuditLogActionType.ChannelDelete,
                                                "Ein Kanal wurde gelöscht!",
                                                $"Channel Name: ```{e.Channel.Name}```\n" +
@@ -279,7 +279,7 @@ namespace DarkBot
         private static async Task ChannelCreatedHandler(DiscordClient sender, ChannelCreateEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                               1143512499732348998,
+                                               1185697811543633980,
                                                AuditLogActionType.ChannelCreate,
                                                "Ein Neuer Kanal wurde erstellt!",
                                                $"**Channel:** {e.Channel.Mention}\n " +
@@ -293,7 +293,7 @@ namespace DarkBot
             if (e.RoleAfter.Name != e.RoleBefore.Name)
             {
                 await DiscordHelper.SendLogMessage(Client,
-                                                   1143515543358414918,
+                                                   1185697811543633980,
                                                    AuditLogActionType.RoleUpdate,
                                                    "Eine Rolle wurde umbenannt!",
                                                    $"**Rolle:** {e.RoleAfter.Mention}\n\n " +
@@ -307,7 +307,7 @@ namespace DarkBot
         private static async Task RoleDeletedHandler(DiscordClient sender, GuildRoleDeleteEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                               1143515632650948643,
+                                               1185697811543633980,
                                                AuditLogActionType.RoleDelete,
                                                "Eine Rolle wurde gelöscht!",
                                                $"**Rolle:** {e.Role.Name}\n\n " +
@@ -318,7 +318,7 @@ namespace DarkBot
         private static async Task RoleCreatedHandler(DiscordClient sender, GuildRoleCreateEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                               1143515988361490513,
+                                               1185697811543633980,
                                                AuditLogActionType.RoleCreate,
                                                "Eine neue Rolle wurde erstellt!",
                                                $"**Rolle:** {e.Role.Name}  -  {e.Role.Mention}\n\n " +
@@ -329,7 +329,7 @@ namespace DarkBot
         private static async Task MessageUpdatedHandler(DiscordClient sender, MessageUpdateEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                               1143517152951935118,
+                                               1185697809874288671,
                                                $"Eine Nachricht wurde bearbeitet! {e.Message.JumpLink}",
                                                $"**User:** {e.Message.Author.Mention}\n" +
                                                $"**Alte Nachricht:** {e.MessageBefore.Content}\n" +
@@ -343,7 +343,7 @@ namespace DarkBot
             var lastLog = auditLogs.FirstOrDefault();
 
             await DiscordHelper.SendLogMessage(Client,
-                                               1143518613777678336,
+                                               1185697809874288671,
                                                AuditLogActionType.Unban,
                                                "User entbannt!",
                                                $"**User:** {e.Member.Mention}\n " +
@@ -360,7 +360,7 @@ namespace DarkBot
             var lastLog = auditLogs.FirstOrDefault();
 
             await DiscordHelper.SendLogMessage(Client,
-                                               1143518462111658034,
+                                               1185697809874288671,
                                                AuditLogActionType.Ban,
                                                "User gebannt!",
                                                $"**User:** {e.Member.Mention}\n " +
@@ -374,7 +374,7 @@ namespace DarkBot
         private static async Task MessageDeletedHandler(DiscordClient sender, MessageDeleteEventArgs e)
         {
             await DiscordHelper.SendLogMessage(Client,
-                                               1143516841357086870,
+                                               1185697809874288671,
                                                AuditLogActionType.MessageDelete,
                                                $"Eine Nachricht wurde gelöscht {e.Message.JumpLink}",
                                                $"**Nachricht:** \n {e.Message.Content}\n " +
@@ -499,7 +499,7 @@ namespace DarkBot
             Client.Logger.LogInformation(EventId, "Bot wird gestartet...");
 
             // Set the initial activity and connect the bot to Discord
-            var act = new DiscordActivity("zKingStef", ActivityType.ListeningTo);
+            var act = new DiscordActivity("X89", ActivityType.ListeningTo);
             await Client.ConnectAsync(act, UserStatus.DoNotDisturb).ConfigureAwait(false);
         }
 

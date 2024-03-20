@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 using DSharpPlus.Exceptions;
 using DSharpPlus.SlashCommands;
 using DSharpPlus.CommandsNext;
-using DarkBot.Common;
+using X89Bot.Common;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using System.IO;
 using System.Net.Http;
 
-namespace DarkBot.EventHandlers
+namespace X89Bot.EventHandlers
 {
     public static class DiscordHelper
     {
@@ -49,7 +49,7 @@ namespace DarkBot.EventHandlers
 
         public static async Task SendLogMessage(DiscordClient client, ulong channelId, AuditLogActionType alaType, string title, string description, DiscordColor color)
         {
-            var guild = await client.GetGuildAsync(978346565209042984);
+            var guild = await client.GetGuildAsync(1185696801936916530);
             var auditLogs = await guild.GetAuditLogsAsync(1, null, alaType);
             var lastLog = auditLogs.FirstOrDefault();
             var responsible = lastLog?.UserResponsible;

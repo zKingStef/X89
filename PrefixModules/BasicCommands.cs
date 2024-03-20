@@ -1,4 +1,4 @@
-﻿using DarkBot.EventHandlers;
+﻿using X89Bot.EventHandlers;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
@@ -8,7 +8,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DarkBot.Commands
+namespace X89Bot.Commands
 {
     public class BasicCommands : BaseCommandModule
     {

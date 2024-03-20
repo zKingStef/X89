@@ -1,4 +1,4 @@
-﻿using DarkBot.Common;
+﻿using X89Bot.Common;
 using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.Lavalink;
@@ -7,7 +7,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 
-namespace DarkBot.Services
+namespace X89Bot.Services
 {
     public sealed class MusicService
     {

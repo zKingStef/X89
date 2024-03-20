@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
     public class ChatGPTModule : ApplicationCommandModule
     {

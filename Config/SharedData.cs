@@ -3,7 +3,7 @@ using System;
 using System.Reflection;
 using System.Text.Json.Serialization;
 
-namespace DarkBot.Common
+namespace X89Bot.Common
 {
     public class BotSettings
     {

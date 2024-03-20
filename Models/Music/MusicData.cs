@@ -2,7 +2,7 @@
 using DSharpPlus.Lavalink;
 using Newtonsoft.Json;
 
-namespace DarkBot.Models.Music
+namespace X89Bot.Models.Music
 {
     public struct MusicData
     {

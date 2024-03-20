@@ -1,4 +1,4 @@
-﻿using DarkBot.EventHandlers;
+﻿using X89Bot.EventHandlers;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
@@ -10,7 +10,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace DarkBot.Common
+namespace X89Bot.Common
 {
 	class ExceptionHandler
 	{

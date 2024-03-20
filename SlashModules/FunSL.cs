@@ -8,11 +8,11 @@ using DSharpPlus.Interactivity.Extensions;
 using System.Linq;
 using System.Collections.Generic;
 using DSharpPlus.EventArgs;
-using DarkBot.EventHandlers;
+using X89Bot.EventHandlers;
 using DSharpPlus.CommandsNext;
 using System.Text;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
     public class FunSL : ApplicationCommandModule
     {

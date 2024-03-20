@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DarkBot.docs
+namespace X89Bot.docs
 {
 	public static class Sym
 	{

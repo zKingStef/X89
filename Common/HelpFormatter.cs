@@ -1,4 +1,4 @@
-﻿using DarkBot;
+﻿using X89Bot;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Converters;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DarkBot.Common
+namespace X89Bot.Common
 {
     public sealed class HelpFormatter : BaseHelpFormatter
     {

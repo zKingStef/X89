@@ -246,7 +246,7 @@
     <Compile Include="PrefixModules\BasicCommands.cs" />
     <Compile Include="Config\SearchHelper.cs" />
     <Compile Include="Config\SharedData.cs" />
-    <Compile Include="DarkBot.cs" />
+    <Compile Include="X89Bot.cs" />
     <Compile Include="docs\Sym.cs" />
     <Compile Include="Common\CasinoHandler.cs" />
     <Compile Include="Common\DiscordHelper.cs" />

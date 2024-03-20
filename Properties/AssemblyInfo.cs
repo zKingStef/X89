@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DarkBot")]
-[assembly: AssemblyDescription("DarkBot")]
+[assembly: AssemblyTitle("X89Bot")]
+[assembly: AssemblyDescription("X89Bot")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Stesimo")]
-[assembly: AssemblyProduct("DarkBot")]
+[assembly: AssemblyProduct("X89Bot")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("Stesimo")]
 [assembly: AssemblyCulture("")]

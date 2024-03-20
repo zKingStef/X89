@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace DarkBot.Services
+namespace X89Bot.Services
 {
     public sealed class LavalinkService
     {

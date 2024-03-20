@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using DSharpPlus.Entities;
 using DSharpPlus;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
     public class CalculatorSL : ApplicationCommandModule
     {

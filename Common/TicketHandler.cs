@@ -4,7 +4,7 @@ using DSharpPlus.Entities;
 using DSharpPlus;
 using DSharpPlus.EventArgs;
 
-namespace DarkBot.EventHandlers
+namespace X89Bot.EventHandlers
 {
 	public class TicketHandler
     {
@@ -14,7 +14,7 @@ namespace DarkBot.EventHandlers
             DiscordMember user = e.User as DiscordMember;
             DiscordGuild guild = e.Guild;
 
-            var category = guild.GetChannel(1207086767623381092) as DiscordChannel;
+            var category = guild.GetChannel(1219947750129532929) as DiscordChannel;
             if (category == null || category.Type != ChannelType.Category)
             {
                 await e.Interaction.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource,

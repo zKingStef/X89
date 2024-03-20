@@ -1,5 +1,5 @@
-﻿using DarkBot.docs;
-using DarkBot.EventHandlers;
+﻿using X89Bot.docs;
+using X89Bot.EventHandlers;
 using DSharpPlus;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
@@ -14,7 +14,7 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
     public class ModSL : ApplicationCommandModule
     {

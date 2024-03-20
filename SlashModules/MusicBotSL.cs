@@ -1,15 +1,15 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Lavalink;
 using DSharpPlus.SlashCommands;
-using DarkBot.Common;
-using DarkBot.Models;
+using X89Bot.Common;
+using X89Bot.Models;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using DarkBot.Services;
-using DarkBot.Models.Music;
+using X89Bot.Services;
+using X89Bot.Models.Music;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
 	[SlashCommandGroup("music", "Slash command group for music commands.")]
     public class MusicBotSL : ApplicationCommandModule

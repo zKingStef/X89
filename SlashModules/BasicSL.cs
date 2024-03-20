@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using DSharpPlus.Entities;
 using DSharpPlus;
 using DSharpPlus.CommandsNext.Attributes;
-using DarkBot.EventHandlers;
+using X89Bot.EventHandlers;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
     public class BasicSL : ApplicationCommandModule
     {

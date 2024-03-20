@@ -1,6 +1,6 @@
-﻿using DarkBot.Models;
-using DarkBot.Models.Music;
-using DarkBot.Services;
+﻿using X89Bot.Models;
+using X89Bot.Models.Music;
+using X89Bot.Services;
 using DSharpPlus.Entities;
 using DSharpPlus.Lavalink;
 using DSharpPlus.Lavalink.EventArgs;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DarkBot.Common
+namespace X89Bot.Common
 {
     public sealed class MusicPlayer
     {

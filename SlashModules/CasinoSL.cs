@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Threading.Channels;
 using DSharpPlus.CommandsNext.Attributes;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
 	public class CasinoSL : ApplicationCommandModule
 	{

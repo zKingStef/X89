@@ -9,7 +9,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace DarkBot.SlashModules
+namespace X89Bot.SlashModules
 {
     [SlashCommandGroup("ticket", "Slash Commands für das Ticketsystem.")]
     public class TicketSL : ApplicationCommandModule
@@ -18,9 +18,14 @@ namespace DarkBot.SlashModules
         [RequireBotPermissions(DSharpPlus.Permissions.Administrator, true)]
         [RequireUserPermissions(DSharpPlus.Permissions.Administrator, true)]
         public async Task Ticketsystem(InteractionContext ctx,
-                                [Choice("Button", 0)]
-                                [Choice("Dropdown Menu", 1)]
-                                [Option("system", "Buttons oder Dropdown")] long systemChoice = 1)
+                               [Choice("Button", 0)]
+                               [Choice("Dropdown Menu", 1)]
+                               [Option("system", "Buttons oder Dropdown")] long systemChoice = 1,
+                               [Choice("fortnite", 0)]
+                               [Choice("cod", 1)]
+                               [Choice("staff", 2)]
+                               [Choice("studio", 3)]
+                               [Option("Kategorie", "Ticketkategorie")] long categoryChoice = 0)
         {
             if (systemChoice == 0)
             {
@@ -45,32 +50,52 @@ namespace DarkBot.SlashModules
 
             else if (systemChoice == 1)
             {
-                var options = new List<DiscordSelectComponentOption>()
+                var options = new List<DiscordSelectComponentOption>();
+
+                switch (categoryChoice)
                 {
-                    new DiscordSelectComponentOption(
-                        "Support",
-                        "ticketSupportDropdown",
-                        "Ticket für allgemeine Probleme, Wünsche und sonstiges!",
-                        emoji: new DiscordComponentEmoji(DiscordEmoji.FromName(ctx.Client, ":envelope:"))),
+                    case 0:
+                        options = new List<DiscordSelectComponentOption>()
+                        {
+                            new DiscordSelectComponentOption(
+                            "Fortnite",
+                            "ticketSupportDropdown",
+                            "Application for the Fortnite Team",
+                            emoji: new DiscordComponentEmoji(DiscordEmoji.FromName(ctx.Client, ":emoji_74:"))),
+                        };
+                        break;
+                    case 1:
+                        options = new List<DiscordSelectComponentOption>()
+                        {
+                            new DiscordSelectComponentOption(
+                            "COD",
+                            "ticketCodDropdown",
+                            "Application for the COD Team",
+                            emoji: new DiscordComponentEmoji(DiscordEmoji.FromName(ctx.Client, ":emoji_79:"))),
+                        };
+                        break;
+                    case 2:
+                        options = new List<DiscordSelectComponentOption>()
+                        {
+                            new DiscordSelectComponentOption(
+                            "Staff",
+                            "ticketStaffDropdown",
+                            "Application for the X89 Staff Team",
+                            emoji: new DiscordComponentEmoji(DiscordEmoji.FromName(ctx.Client, ":emoji_92~1:"))),
+                        };
+                        break;
+                    case 3:
+                        options = new List<DiscordSelectComponentOption>()
+                        {
+                            new DiscordSelectComponentOption(
+                            "Studio",
+                            "ticketStudioDropdown",
+                            "Application for the Studio Team",
+                            emoji: new DiscordComponentEmoji(DiscordEmoji.FromName(ctx.Client, ":emoji_65:"))),
+                        };
+                        break;
 
-                    new DiscordSelectComponentOption(
-                        "Entbannung",
-                        "ticketUnbanDropdown",
-                        "Hier kannst du über eine Entbannung diskutieren!",
-                        emoji: new DiscordComponentEmoji(DiscordEmoji.FromName(ctx.Client, ":tickets:"))),
-
-                    new DiscordSelectComponentOption(
-                        "Spenden",
-                        "ticketDonationDropdown",
-                        "Ticket für Donations!",
-                        emoji: new DiscordComponentEmoji(DiscordEmoji.FromName(ctx.Client, ":moneybag:"))),
-
-                    new DiscordSelectComponentOption(
-                        "Inhaber",
-                        "ticketOwnerDropdown",
-                        "Dieses Ticket geht speziell an den Inhaber des Servers!",
-                        emoji: new DiscordComponentEmoji(DiscordEmoji.FromName(ctx.Client, ":factory_worker:"))),
-                };
+                }
 
                 var ticketDropdown = new DiscordSelectComponent("ticketDropdown", "Wähle eine passende Kategorie aus", options, false, 0, 1);
 
@@ -178,7 +203,7 @@ namespace DarkBot.SlashModules
             {
                 var msg = await new DiscordMessageBuilder()
                     .AddFile("transript.txt", memoryStream)
-                    .SendAsync(ctx.Guild.GetChannel(978669571483500574));
+                    .SendAsync(ctx.Guild.GetChannel(1185697806997000314));
             }
 
             await Task.Delay(TimeSpan.FromSeconds(60));
@@ -188,7 +213,7 @@ namespace DarkBot.SlashModules
 
         private async Task<bool> CheckIfChannelIsTicket(InteractionContext ctx)
         { 
-            const ulong categoryId = 1207086767623381092;
+            const ulong categoryId = 1219947750129532929;
 
             if (ctx.Channel.Parent.Id != categoryId || ctx.Channel.Parent == null)
             {

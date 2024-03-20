@@ -1,4 +1,4 @@
-﻿namespace DarkBot.Models.Music
+﻿namespace X89Bot.Models.Music
 {
     public struct YouTubeData
     {

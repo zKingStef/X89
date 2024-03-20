@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DarkBot.EventHandlers
+namespace X89Bot.EventHandlers
 {
 	public class CasinoHandler
 	{
