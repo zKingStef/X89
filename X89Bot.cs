@@ -486,7 +486,7 @@ namespace X89Bot
             slash.RegisterCommands<TicketSL>();
             slash.RegisterCommands<GiveawaySL>();
             slash.RegisterCommands<CalculatorSL>();
-            slash.RegisterCommands<ImageSL>();
+            //slash.RegisterCommands<ImageSL>();
             slash.RegisterCommands<CasinoSL>();
             slash.RegisterCommands<MusicBotSL>();
 			slash.SlashCommandErrored += SlashCommand_Errored;

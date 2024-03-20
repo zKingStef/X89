@@ -440,7 +440,7 @@ namespace X89Bot.EventHandlers
             var stream = new MemoryStream();
             if (input != null && !Uri.TryCreate(input, UriKind.Absolute, out _) && (!input.EndsWith(".img") || !input.EndsWith(".png") || !input.EndsWith(".jpg")))
             {
-                await SendResponseAsync(ctx, Properties.Resources.URL_INVALID_IMG, ResponseType.Warning).ConfigureAwait(false);
+                await SendResponseAsync(ctx, DarkBot.Properties.Resources.URL_INVALID_IMG, ResponseType.Warning).ConfigureAwait(false);
             }
             else
             {
@@ -469,7 +469,7 @@ namespace X89Bot.EventHandlers
             var stream = new MemoryStream();
             if (input != null && !Uri.TryCreate(input, UriKind.Absolute, out _) && (!input.EndsWith(".img") || !input.EndsWith(".png") || !input.EndsWith(".jpg")))
             {
-                await SendResponseAsync(ctx, Properties.Resources.URL_INVALID_IMG, ResponseType.Warning).ConfigureAwait(false);
+                await SendResponseAsync(ctx, DarkBot.Properties.Resources.URL_INVALID_IMG, ResponseType.Warning).ConfigureAwait(false);
             }
             else
             {

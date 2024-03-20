@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace X89Bot.Properties {
+namespace DarkBot.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace X89Bot.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("X89Bot.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DarkBot.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace X89Bot.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to zKingStef.
+        ///   Looks up a localized string similar to X89.
         /// </summary>
         internal static string APP_DEFAULT_ACTIVITY {
             get {
